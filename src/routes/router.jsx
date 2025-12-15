@@ -20,6 +20,8 @@ import PaymentPage from "../pages/Payment/Payment";
 import Payment from "../pages/Payment/Payment";
 import PaymentSuccess from "../pages/Payment/PaymentSuccess";
 import ParticipatedContests from "../pages/Dashboard/User/MyParticipated";
+import MyWinningContests from "../pages/Dashboard/User/MyWinning";
+import CreatorDashboard from "../pages/Dashboard/Creator/CreatorHome";
 
 export const router = createBrowserRouter([
     {
@@ -79,6 +81,10 @@ export const router = createBrowserRouter([
                 path: 'edit-contest/:id',
                 Component: EditContest
             },
+            {
+                path: 'dashboard',
+                Component:CreatorDashboard
+            },
 
             // user routes
             {
@@ -87,7 +93,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'winning',
-                Component: MyWinning
+                Component: MyWinningContests
             },
             {
                 path: 'profile',
@@ -103,7 +109,7 @@ export const router = createBrowserRouter([
                 Component: PaymentSuccess
             },
 
-            
+
             // {
             //     path: 'payment-history',
             //     Component: PaymentHistory
@@ -136,5 +142,5 @@ export const router = createBrowserRouter([
             // }
         ]
     },
-   
+
 ]);

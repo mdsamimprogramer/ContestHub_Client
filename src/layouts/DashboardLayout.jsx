@@ -45,6 +45,12 @@ const DashboardLayout = () => {
 
                         {/* creator layouts */}
                         <li>
+                            <NavLink to='/dashboard/dashboard' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="creator-dashboard">
+                                <IoIosPersonAdd size={18} />
+                                <span className="is-drawer-close:hidden">dashboard</span>
+                            </NavLink>
+                        </li>
+                        <li>
                             <NavLink to='/dashboard/add-contest' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Add Contest">
                                 <IoIosPersonAdd size={18} />
                                 <span className="is-drawer-close:hidden">Add Contest</span>
