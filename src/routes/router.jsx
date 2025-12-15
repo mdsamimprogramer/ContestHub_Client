@@ -22,6 +22,11 @@ import PaymentSuccess from "../pages/Payment/PaymentSuccess";
 import ParticipatedContests from "../pages/Dashboard/User/MyParticipated";
 import MyWinningContests from "../pages/Dashboard/User/MyWinning";
 import WinnerDeclare from "../pages/Dashboard/Creator/WinnerDeclare";
+import AdminDashboard from "../pages/Dashboard/Admin/AdminHome";
+import ManageContests from "../pages/Dashboard/Admin/ManageContests";
+import ManageUsers from "../pages/Dashboard/Admin/ManageUsers";
+import ManagePayments from "../pages/Dashboard/Admin/ManagePayments";
+import AdminRoute from "./AdminRoute";
 
 export const router = createBrowserRouter([
     {
@@ -110,10 +115,7 @@ export const router = createBrowserRouter([
             },
 
             // admin routes
-            {
-                path: "admin",
-                element: <AdminRoute><AdminDashboard /></AdminRoute>
-            },
+            { path: "admin", element: <AdminDashboard />},
             { path: "admin/contests", element: <ManageContests /> },
             { path: "admin/users", element: <ManageUsers /> },
             { path: "admin/payments", element: <ManagePayments /> },

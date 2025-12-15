@@ -83,7 +83,31 @@ const DashboardLayout = () => {
                         </li>
 
 
-
+                        {/* admin route */}
+                        <li>
+                            <NavLink to='/admin' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
+                                <FaMotorcycle size={18} />
+                                <span className="is-drawer-close:hidden">Approve-riders</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='admin/contests' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
+                                <FaMotorcycle size={18} />
+                                <span className="is-drawer-close:hidden">Approve-riders</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='admin/users' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
+                                <FaMotorcycle size={18} />
+                                <span className="is-drawer-close:hidden">Approve-riders</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='admin/payments' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
+                                <FaMotorcycle size={18} />
+                                <span className="is-drawer-close:hidden">Approve-riders</span>
+                            </NavLink>
+                        </li>
 
                         {/* <li>
                             <NavLink to='/dashboard/payment-history' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Payment History">

@@ -1,0 +1,42 @@
+import { useQuery } from "@tanstack/react-query";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import Loading from "../../../components/Loading";
+
+
+const AdminDashboard = () => {
+    const axiosSecure = useAxiosSecure();
+
+    const { data = {}, isLoading } = useQuery({
+        queryKey: ["admin-stats"],
+        queryFn: async () => {
+            const res = await axiosSecure.get("/admin/stats");
+            return res.data;
+        },
+    });
+
+    if (isLoading) return <Loading />;
+
+    const { totalUsers, totalCreators, totalContests, totalEarnings } = data;
+
+    return (
+        <div className="p-6">
+            <h2 className="text-3xl font-bold mb-6">Admin Dashboard</h2>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <StatCard title="Total Users" value={totalUsers} />
+                <StatCard title="Creators" value={totalCreators} />
+                <StatCard title="Contests" value={totalContests} />
+                <StatCard title="Earnings ($)" value={totalEarnings} />
+            </div>
+        </div>
+    );
+};
+
+const StatCard = ({ title, value }) => (
+    <div className="bg-white shadow rounded-lg p-6 text-center">
+        <p className="text-gray-500">{title}</p>
+        <h3 className="text-3xl font-bold text-fuchsia-600">{value}</h3>
+    </div>
+);
+
+export default AdminDashboard;
