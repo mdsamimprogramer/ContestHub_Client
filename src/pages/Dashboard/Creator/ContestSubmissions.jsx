@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import Loading from "../../../components/Loading";
 
 export default function ContestSubmissions() {
     const { id } = useParams(); // contestId
@@ -40,7 +41,7 @@ export default function ContestSubmissions() {
         }
     };
 
-    if (loading) return <div>Loading submissions...</div>;
+    if (loading) return <Loading></Loading>
 
     return (
         <div className="p-4">

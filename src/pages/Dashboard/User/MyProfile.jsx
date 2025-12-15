@@ -26,10 +26,15 @@ const MyProfile = () => {
             <div className="bg-white shadow-lg rounded-lg p-6">
                 <div className="flex flex-col sm:flex-row items-center gap-4">
                     <img
-                        src={userInfo?.profilePic || "/default-avatar.png"}
+                        src={
+                            userInfo?.photo ||
+                            user?.photoURL ||
+                            "https://i.ibb.co/4pDNDk1/avatar.png"
+                        }
                         alt={userInfo?.name}
                         className="h-24 w-24 rounded-full object-cover"
                     />
+
                     <div>
                         <h3 className="text-xl font-semibold">{userInfo?.name}</h3>
                         <p className="text-gray-500">{userInfo?.email}</p>

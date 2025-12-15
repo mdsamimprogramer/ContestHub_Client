@@ -2,8 +2,7 @@ import React from 'react';
 import { BsArrowLeftRight } from 'react-icons/bs';
 import { FaHeadset, FaMotorcycle, FaRegCreditCard, FaTasks, FaUser } from 'react-icons/fa';
 import { GoProjectSymlink } from "react-icons/go";
-import { LuSettings2 } from 'react-icons/lu';
-import { SiBombardier } from 'react-icons/si';
+import { MdOutlineAddTask } from "react-icons/md";
 import { GiDeliveryDrone } from "react-icons/gi";
 import { TbHomeHand } from 'react-icons/tb';
 import { Link, NavLink, Outlet } from 'react-router';
@@ -36,7 +35,7 @@ const DashboardLayout = () => {
                         {/* List item */}
                         <li>
                             <Link to={'/'} className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Homepage">
-                                <TbHomeHand size={20} />
+                                <TbHomeHand size={22} />
                                 <span className="is-drawer-close:hidden">Homepage</span>
                             </Link>
                         </li>
@@ -45,40 +44,40 @@ const DashboardLayout = () => {
 
                         {/* creator layouts */}
                         <li>
-                            <NavLink to='/dashboard/dashboard' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="creator-dashboard">
-                                <IoIosPersonAdd size={18} />
-                                <span className="is-drawer-close:hidden">dashboard</span>
-                            </NavLink>
-                        </li>
-                        <li>
                             <NavLink to='/dashboard/add-contest' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Add Contest">
-                                <IoIosPersonAdd size={18} />
+                                <IoIosPersonAdd size={20} />
                                 <span className="is-drawer-close:hidden">Add Contest</span>
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to='/dashboard/my-contest' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Contest">
-                                <GoProjectSymlink size={18} />
+                                <GoProjectSymlink size={20} />
                                 <span className="is-drawer-close:hidden">My Contest</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/dashboard/dashboard' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Submitted Tasks & Declare Winner">
+                                <MdOutlineAddTask size={20} />
+                                <span className="is-drawer-close:hidden">Submitted Tasks</span>
                             </NavLink>
                         </li>
 
                         {/* user layouts */}
                         <li>
                             <NavLink to='/dashboard/participated' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="participated">
-                                <GiDeliveryDrone size={18} />
+                                <GiDeliveryDrone size={20} />
                                 <span className="is-drawer-close:hidden">My Participated Contests</span>
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to='/dashboard/winning' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Winning Contests">
-                                <GiDeliveryDrone size={18} />
+                                <GiDeliveryDrone size={20} />
                                 <span className="is-drawer-close:hidden">My Winning Contests</span>
                             </NavLink>
                         </li>
                         <li>
                             <NavLink to='/dashboard/profile' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Profile">
-                                <GiDeliveryDrone size={18} />
+                                <GiDeliveryDrone size={20} />
                                 <span className="is-drawer-close:hidden">My Profile</span>
                             </NavLink>
                         </li>
@@ -119,7 +118,7 @@ const DashboardLayout = () => {
                         {/* List item */}
                         <li>
                             <button className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Settings">
-                                <FaHeadset size={18} />
+                                <FaHeadset size={20} />
                                 <span className="is-drawer-close:hidden">Settings</span>
                             </button>
                         </li>

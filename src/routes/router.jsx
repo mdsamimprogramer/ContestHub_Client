@@ -21,7 +21,7 @@ import Payment from "../pages/Payment/Payment";
 import PaymentSuccess from "../pages/Payment/PaymentSuccess";
 import ParticipatedContests from "../pages/Dashboard/User/MyParticipated";
 import MyWinningContests from "../pages/Dashboard/User/MyWinning";
-import CreatorDashboard from "../pages/Dashboard/Creator/CreatorHome";
+import WinnerDeclare from "../pages/Dashboard/Creator/WinnerDeclare";
 
 export const router = createBrowserRouter([
     {
@@ -83,7 +83,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'dashboard',
-                Component:CreatorDashboard
+                Component:WinnerDeclare
             },
 
             // user routes
@@ -109,6 +109,15 @@ export const router = createBrowserRouter([
                 Component: PaymentSuccess
             },
 
+            // admin routes
+            {
+                path: "admin",
+                element: <AdminRoute><AdminDashboard /></AdminRoute>
+            },
+            { path: "admin/contests", element: <ManageContests /> },
+            { path: "admin/users", element: <ManageUsers /> },
+            { path: "admin/payments", element: <ManagePayments /> },
+
 
             // {
             //     path: 'payment-history',
@@ -123,19 +132,6 @@ export const router = createBrowserRouter([
             //     Component: PaymentCancelled
             // },
 
-            // {
-            //     path: 'assigned-deliveries',
-            //     element: <RiderRoute><AssignedDeliveries></AssignedDeliveries></RiderRoute>
-            // },
-
-            // {
-            //     path: "approve-riders",
-            //     element: <AdminRoute><ApproveRiders></ApproveRiders></AdminRoute>
-            // },
-            // {
-            //     path: "assign-riders",
-            //     element: <AdminRoute><AssignRiders></AssignRiders></AdminRoute>
-            // },
             // {
             //     path: "users-management",
             //     element: <AdminRoute><UsersManagement></UsersManagement></AdminRoute>
