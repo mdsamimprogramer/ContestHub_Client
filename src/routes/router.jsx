@@ -27,6 +27,7 @@ import ManageContests from "../pages/Dashboard/Admin/ManageContests";
 import ManageUsers from "../pages/Dashboard/Admin/ManageUsers";
 import ManagePayments from "../pages/Dashboard/Admin/ManagePayments";
 import AdminRoute from "./AdminRoute";
+import CreatorRoute from "./CreatorRoute";
 
 export const router = createBrowserRouter([
     {
@@ -72,23 +73,23 @@ export const router = createBrowserRouter([
             // creator routes
             {
                 path: 'add-contest',
-                Component: AddContest
+                element: <CreatorRoute><AddContest></AddContest></CreatorRoute>
             },
             {
                 path: 'my-contest',
-                Component: MyContests
+                element: <CreatorRoute><MyContests></MyContests></CreatorRoute>
             },
             {
                 path: 'contest-submissions/:id',
-                Component: ContestSubmissions
+                element: <CreatorRoute><ContestSubmissions></ContestSubmissions></CreatorRoute>
             },
             {
                 path: 'edit-contest/:id',
-                Component: EditContest
+                element: <CreatorRoute><EditContest></EditContest></CreatorRoute>
             },
             {
                 path: 'dashboard',
-                Component:WinnerDeclare
+                element: <CreatorRoute><AddContest></AddContest></CreatorRoute>,
             },
 
             // user routes

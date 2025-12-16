@@ -8,9 +8,10 @@ import { TbHomeHand } from 'react-icons/tb';
 import { Link, NavLink, Outlet } from 'react-router';
 import { RiEBikeFill } from 'react-icons/ri';
 import { IoIosPersonAdd } from "react-icons/io";
+import useRole from '../hooks/useRole';
 
 const DashboardLayout = () => {
-    // const { role } = useRole()
+    const { role } = useRole()
     return (
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
@@ -40,68 +41,81 @@ const DashboardLayout = () => {
                             </Link>
                         </li>
 
-                        {/* our dashboard links */}
-
-                        {/* creator layouts */}
-                        <li>
-                            <NavLink to='/dashboard/add-contest' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Add Contest">
-                                <IoIosPersonAdd size={20} />
-                                <span className="is-drawer-close:hidden">Add Contest</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/my-contest' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Contest">
-                                <GoProjectSymlink size={20} />
-                                <span className="is-drawer-close:hidden">My Contest</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/dashboard' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Submitted Tasks & Declare Winner">
-                                <MdOutlineAddTask size={20} />
-                                <span className="is-drawer-close:hidden">Submitted Tasks</span>
-                            </NavLink>
-                        </li>
-
-                        {/* user layouts */}
-                        <li>
-                            <NavLink to='/dashboard/participated' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="participated">
-                                <GiDeliveryDrone size={20} />
-                                <span className="is-drawer-close:hidden">My Participated Contests</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/winning' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Winning Contests">
-                                <GiDeliveryDrone size={20} />
-                                <span className="is-drawer-close:hidden">My Winning Contests</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/profile' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Profile">
-                                <GiDeliveryDrone size={20} />
-                                <span className="is-drawer-close:hidden">My Profile</span>
-                            </NavLink>
-                        </li>
+                        {/* creator Dashboard layouts */}
+                        {
+                            role === 'creator' && <>
+                                <li>
+                                    <NavLink to='/dashboard/add-contest' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Add Contest">
+                                        <IoIosPersonAdd size={20} />
+                                        <span className="is-drawer-close:hidden">Add Contest</span>
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/dashboard/my-contest' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Contest">
+                                        <GoProjectSymlink size={20} />
+                                        <span className="is-drawer-close:hidden">My Contest</span>
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/dashboard/dashboard' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Submitted Tasks & Declare Winner">
+                                        <MdOutlineAddTask size={20} />
+                                        <span className="is-drawer-close:hidden">Submitted Tasks</span>
+                                    </NavLink>
+                                </li>
+                            </>
+                        }
 
 
-                        {/* admin route */}
-                        <li>
-                            <NavLink to='/dashboard/admin' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
-                                <FaMotorcycle size={18} />
-                                <span className="is-drawer-close:hidden">Approve-riders</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/admin/contests' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
-                                <FaMotorcycle size={18} />
-                                <span className="is-drawer-close:hidden">Approve-riders</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/admin/users' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
-                                <FaMotorcycle size={18} />
-                                <span className="is-drawer-close:hidden">Approve-riders</span>
-                            </NavLink>
-                        </li>
+
+                        {/* user Dashboard layouts */}
+                        {
+                            role === 'user' && <>
+                                <li>
+                                    <NavLink to='/dashboard/participated' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="participated">
+                                        <GiDeliveryDrone size={20} />
+                                        <span className="is-drawer-close:hidden">My Participated Contests</span>
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/dashboard/winning' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Winning Contests">
+                                        <GiDeliveryDrone size={20} />
+                                        <span className="is-drawer-close:hidden">My Winning Contests</span>
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/dashboard/profile' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="My Profile">
+                                        <GiDeliveryDrone size={20} />
+                                        <span className="is-drawer-close:hidden">My Profile</span>
+                                    </NavLink>
+                                </li>
+                            </>
+                        }
+
+
+                        {/* admin Dashboard route */}
+                        {
+                            role === 'admin' && <>
+                                <li>
+                                    <NavLink to='/dashboard/admin' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
+                                        <FaMotorcycle size={18} />
+                                        <span className="is-drawer-close:hidden">Approve-riders</span>
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/dashboard/admin/contests' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
+                                        <FaMotorcycle size={18} />
+                                        <span className="is-drawer-close:hidden">Approve-riders</span>
+                                    </NavLink>
+                                </li>
+                                <li>
+                                    <NavLink to='/dashboard/admin/users' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
+                                        <FaMotorcycle size={18} />
+                                        <span className="is-drawer-close:hidden">Approve-riders</span>
+                                    </NavLink>
+                                </li>
+                            </>
+                        }
+
 
                         {/* <li>
                             <NavLink to='/dashboard/payment-history' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Payment History">

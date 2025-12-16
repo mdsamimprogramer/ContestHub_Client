@@ -1,21 +1,32 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import Loading from "../../../components/Loading";
-
 const AdminDashboard = () => {
     const axiosSecure = useAxiosSecure();
 
-    const { data = {}, isLoading } = useQuery({
+    const { data = {}, isLoading, isError, error } = useQuery({
         queryKey: ["admin-stats"],
         queryFn: async () => {
-            const res = await axiosSecure.get("/admin/stats");
-            return res.data;
+            try {
+                const res = await axiosSecure.get("/admin/stats");
+                return res.data;
+            } catch (err) {
+                console.error("Error fetching admin stats:", err);
+                throw err; // react-query will handle this as isError
+            }
         },
     });
 
     if (isLoading) return <Loading />;
 
-    const { totalUsers, totalCreators, totalContests, totalEarnings } = data;
+    if (isError)
+        return (
+            <div className="p-6 text-red-600">
+                Failed to load admin stats: {error?.response?.data?.error || error.message}
+            </div>
+        );
+
+    const { totalUsers = 0, totalCreators = 0, totalContests = 0, totalEarnings = 0 } = data;
 
     return (
         <div className="p-6">
