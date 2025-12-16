@@ -43,7 +43,6 @@ export default function MyContests() {
     return (
         <div className="p-4">
             <h2 className="text-xl font-bold mb-4">My Created Contests</h2>
-
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>

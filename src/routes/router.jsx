@@ -89,7 +89,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'dashboard',
-                element: <CreatorRoute><AddContest></AddContest></CreatorRoute>,
+                element: <CreatorRoute><WinnerDeclare></WinnerDeclare></CreatorRoute>,
             },
 
             // user routes

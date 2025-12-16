@@ -11,7 +11,7 @@ const WinnerDeclare = () => {
 
     const [selectedContest, setSelectedContest] = useState(null);
 
-    // 1️⃣ Fetch contests created by this user
+    // 1️ Fetch contests created by this user
     const { data: contests = [], isLoading } = useQuery({
         queryKey: ["my-contests", user?.email],
         enabled: !!user?.email,
@@ -21,7 +21,7 @@ const WinnerDeclare = () => {
         },
     });
 
-    // 2️⃣ Fetch submissions for selected contest
+    // 2️ Fetch submissions for selected contest
     const { data: submissions = [], refetch: refetchSubmissions } = useQuery({
         queryKey: ["submissions", selectedContest?._id],
         enabled: !!selectedContest,
@@ -70,11 +70,7 @@ const WinnerDeclare = () => {
                         onClick={() => handleSelectContest(contest)}
                     >
                         <figure>
-                            <img
-                                src={contest.image}
-                                alt={contest.name}
-                                className="h-40 w-full object-cover"
-                            />
+                            <img src={contest.image} alt={contest.name} className="h-40 w-full object-cover"/>
                         </figure>
                         <div className="card-body">
                             <h3 className="card-title">{contest.name}</h3>
@@ -106,10 +102,7 @@ const WinnerDeclare = () => {
 
                     <div className="grid gap-4">
                         {submissions.map((sub) => (
-                            <div
-                                key={sub._id}
-                                className="card bg-base-100 shadow p-4 flex justify-between items-center"
-                            >
+                            <div key={sub._id} className="card bg-base-100 shadow p-4 flex justify-between items-center">
                                 <div>
                                     <p className="font-semibold">{sub.userEmail}</p>
                                     <p className="text-sm text-gray-500 break-all">
@@ -118,16 +111,11 @@ const WinnerDeclare = () => {
                                 </div>
 
                                 {!sub.isWinner && selectedContest.status !== "ended" ? (
-                                    <button
-                                        className="btn btn-primary btn-sm"
-                                        onClick={() => declareWinner(sub._id)}
-                                    >
+                                    <button className="btn btn-primary btn-sm" onClick={() => declareWinner(sub._id)}>
                                         Declare Winner
                                     </button>
                                 ) : (
-                                    sub.isWinner && (
-                                        <span className="badge badge-success">Winner 🏆</span>
-                                    )
+                                    sub.isWinner && (<span className="badge badge-success">Winner 🏆</span>)
                                 )}
                             </div>
                         ))}
