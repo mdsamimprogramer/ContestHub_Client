@@ -50,7 +50,7 @@ export default function EditContest() {
 
             const payload = { ...data, image: imageURL };
 
-            const res = await axiosSecure.patch(`/contests/${id}`, payload);
+            const res = await axiosSecure.patch(`/contests/edit/${id}`, payload);
 
             if (res.data.modifiedCount) {
                 Swal.fire("Updated", "Contest updated successfully!", "success").then(() => {

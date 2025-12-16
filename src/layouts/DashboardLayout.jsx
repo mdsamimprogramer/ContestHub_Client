@@ -116,13 +116,6 @@ const DashboardLayout = () => {
                         }
 
 
-                        {/* <li>
-                            <NavLink to='/dashboard/payment-history' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Payment History">
-                                <FaRegCreditCard size={18} />
-                                <span className="is-drawer-close:hidden">Payment History</span>
-                            </NavLink>
-                        </li> */}
-
                         {/* admin only links */}
                         {/* {role === 'admin' && <>
                             <li>
@@ -146,12 +139,11 @@ const DashboardLayout = () => {
                             </NavLink>
                         </li> */}
 
-                        {/* List item */}
                         <li>
-                            <button className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Support & Settings">
+                            <NavLink to='/support-settings' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Support & Settings">
                                 <FaHeadset size={20} />
                                 <span className="is-drawer-close:hidden">Support & Settings</span>
-                            </button>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
