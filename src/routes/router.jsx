@@ -115,10 +115,23 @@ export const router = createBrowserRouter([
             },
 
             // admin routes
-            { path: "admin", element: <AdminDashboard />},
-            { path: "admin/contests", element: <ManageContests /> },
-            { path: "admin/users", element: <ManageUsers /> },
-            { path: "admin/payments", element: <ManagePayments /> },
+            {
+                path: "admin",
+                element: <AdminRoute><AdminDashboard /></AdminRoute>
+            },
+            {
+                path: "admin/contests",
+                element: <AdminRoute><ManageContests /></AdminRoute>
+            },
+            {
+                path: "admin/users",
+                element: <AdminRoute><ManageUsers /></AdminRoute>
+            },
+            {
+                path: "admin/payments",
+                element: <AdminRoute><ManagePayments /></AdminRoute>
+            },
+
 
 
             // {

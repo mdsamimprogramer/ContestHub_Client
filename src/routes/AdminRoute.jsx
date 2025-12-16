@@ -1,24 +1,31 @@
 import React from 'react';
+import { Navigate, Outlet } from 'react-router';
+import { useQuery } from '@tanstack/react-query';
 import useAuth from '../hooks/useAuth';
-import useRole from '../hooks/useRole';
-import ErrorPage from '../components/ErrorPage';
+import useAxiosSecure from '../hooks/useAxiosSecure';
+
 
 const AdminRoute = ({ children }) => {
-    const { loading } = useAuth();
-    const { role, roleLoading } = useRole();
+    const { user, loading } = useAuth();
+    const axiosSecure = useAxiosSecure();
 
-    // loading state
-    if (loading || roleLoading) {
-        return <span className="loading loading-infinity loading-xl"></span>;
+    const { data: roleData, isLoading } = useQuery({
+        queryKey: ['user-role', user?.email],
+        queryFn: async () => {
+            if (!user?.email) return { role: 'user' };
+            const res = await axiosSecure.get(`/users/role/${user.email}`);
+            return res.data;
+        },
+        enabled: !!user?.email,
+    });
+
+    if (loading || isLoading) return <div>Loading...</div>;
+
+    if (roleData?.role !== 'admin') {
+        return <Navigate to='/' />;
     }
 
-    // not admin
-    if (role !== 'admin') {
-        return <ErrorPage></ErrorPage>
-    }
-
-    // admin access granted
-    return children;
+    return children ? children : <Outlet />;
 };
 
 export default AdminRoute;
