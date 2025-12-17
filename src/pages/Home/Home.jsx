@@ -5,7 +5,7 @@ import WinnerSection from "./WinnerSection";
 
 export default function Home() {
     return (
-        <div className="py-10 space-y-10">
+        <div className="py-8 space-y-10">
             <HeroSection></HeroSection>
             <PopularContests></PopularContests>
             <WinnerSection></WinnerSection>

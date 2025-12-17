@@ -6,7 +6,6 @@ import forbiddenAnim from "/forbidden.json";
 const ErrorPage = () => {
     return (
         <div className="h-screen flex flex-col justify-center items-center text-center px-4">
-
             <Player
                 autoplay
                 loop
