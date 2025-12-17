@@ -25,7 +25,6 @@ import WinnerDeclare from "../pages/Dashboard/Creator/WinnerDeclare";
 import AdminDashboard from "../pages/Dashboard/Admin/AdminHome";
 import ManageContests from "../pages/Dashboard/Admin/ManageContests";
 import ManageUsers from "../pages/Dashboard/Admin/ManageUsers";
-import ManagePayments from "../pages/Dashboard/Admin/ManagePayments";
 import AdminRoute from "./AdminRoute";
 import CreatorRoute from "./CreatorRoute";
 import SupportSettings from "../components/SupportSettings";
@@ -129,10 +128,7 @@ export const router = createBrowserRouter([
                 path: "admin/users",
                 element: <AdminRoute><ManageUsers /></AdminRoute>
             },
-            {
-                path: "admin/payments",
-                element: <AdminRoute><ManagePayments /></AdminRoute>
-            },
+        
             {
                 path: 'support-settings',
                 Component: SupportSettings

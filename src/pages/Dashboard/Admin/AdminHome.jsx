@@ -29,7 +29,7 @@ const AdminDashboard = () => {
     const { totalUsers = 0, totalCreators = 0, totalContests = 0, totalEarnings = 0 } = data;
 
     return (
-        <div className="p-6">
+        <div className="p-5 md:p-8">
             <h2 className="text-3xl font-bold mb-6">Admin Dashboard</h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
