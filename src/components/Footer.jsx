@@ -4,12 +4,13 @@ import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-gray-300 mt-10">
-            <div className="max-w-7xl mx-auto px-5 py-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {/* Main Footer Content */}
+            <div className="px-5 md:px-12 lg:px-20 xl:px-28 pt-8 pb-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
                 {/* Logo & Description */}
                 <div className="space-y-3">
-                    <h1 className="text-2xl font-bold text-white">ContestHub</h1>
+                    <h1 className="text-2xl font-bold text-fuchsia-500">ContestHub</h1>
                     <p className="text-gray-400">
-                        A modern contest platform to create, participate, and celebrate creative contests online.
+                        A modern platform to create, participate, and celebrate creative contests online.
                     </p>
                 </div>
 
@@ -38,28 +39,28 @@ const Footer = () => {
                 {/* Social Links */}
                 <div className="space-y-2">
                     <h3 className="text-white font-semibold">Follow Us</h3>
-                    <div className="flex gap-4 mt-2">
+                    <div className="flex gap-4 mt-2 md:mt-4">
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
-                            <FaFacebook size={24} />
+                            <FaFacebook size={28} />
                         </a>
                         <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
-                            <FaLinkedin size={24} />
+                            <FaLinkedin size={28} />
                         </a>
                         <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition">
-                            <FaTwitter size={24} />
+                            <FaTwitter size={28} />
                         </a>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition">
-                            <FaInstagram size={24} />
+                            <FaInstagram size={28} />
                         </a>
                     </div>
                 </div>
             </div>
 
-            {/* Copyright */}
-            <div className="border-t border-gray-800 mt-6">
-                <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center text-gray-500 text-sm">
+            {/* Bottom Footer */}
+            <div className="border-t border-gray-800 mt-2.5">
+                <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col items-center justify-center text-gray-500 text-sm text-center">
                     <p>© 2025 ContestHub. All rights reserved.</p>
-                    <p>Designed & Developed by <span className="text-fuchsia-500 font-semibold">Your Name</span></p>
+                    <p> Designed & Developed by <span className="text-fuchsia-500 font-semibold">Samim</span></p>
                 </div>
             </div>
         </footer>
