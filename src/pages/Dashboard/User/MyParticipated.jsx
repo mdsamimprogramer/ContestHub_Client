@@ -47,9 +47,10 @@ const ParticipatedContests = () => {
             queryClient.invalidateQueries(["participated-contests", user.email]);
         } catch (err) {
             console.error(err);
-            toast.error("Submission failed Already submitted");
+            toast.error("Submission failed or already submitted");
         }
     };
+
     if (isLoading) return <Loading />;
 
     return (
@@ -64,9 +65,15 @@ const ParticipatedContests = () => {
                 draggable
                 theme="colored"
             />
-            <h2 className="text-2xl font-bold mb-6"> My Participated Contests: <span className="text-fuchsia-600">{contests.length}</span> </h2>
 
-            {contests.length === 0 && (<p className="text-gray-500">You have not participated in any contest yet.</p>)}
+            <h2 className="text-2xl font-bold mb-6">
+                My Participated Contests:{" "}
+                <span className="text-fuchsia-600">{contests.length}</span>
+            </h2>
+
+            {contests.length === 0 && (
+                <p className="text-gray-500">You have not participated in any contest yet.</p>
+            )}
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {contests.map((contest) => {
@@ -80,26 +87,21 @@ const ParticipatedContests = () => {
                         >
                             <figure className="overflow-hidden">
                                 <img
-                                    src={contest.image}
+                                    src={contest.image || "/default-contest.png"}
                                     alt={contest.name}
                                     className="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </figure>
 
                             <div className="p-5 space-y-3">
-                                <h3 className="text-lg font-semibold text-gray-800">
-                                    {contest.name}
-                                </h3>
-
+                                <h3 className="text-lg font-semibold text-gray-800">{contest.name}</h3>
                                 <p className="text-sm text-gray-500">
                                     Prize: <span className="font-medium">${contest.prizeMoney}</span>
                                 </p>
 
                                 <div className="flex items-center gap-2">
                                     <span
-                                        className={`px-3 py-1 text-xs font-semibold rounded-full ${ended
-                                                ? "bg-red-100 text-red-600"
-                                                : "bg-green-100 text-green-600"
+                                        className={`px-3 py-1 text-xs font-semibold rounded-full ${ended ? "bg-red-100 text-red-600" : "bg-green-100 text-green-600"
                                             }`}
                                     >
                                         {ended ? "Ended" : "Ongoing"}
@@ -139,7 +141,7 @@ const ParticipatedContests = () => {
             {modalOpen && selectedContest && (
                 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
                     <div className="bg-white rounded-2xl shadow-xl w-full max-w-md p-6 animate-scaleIn">
-                        <h3 className="text-xl font-semibold text-gray-800 mb-4"> Submit Task </h3>
+                        <h3 className="text-xl font-semibold text-gray-800 mb-4">Submit Task</h3>
                         <p className="text-sm text-gray-500 mb-3">
                             Contest: <span className="font-medium">{selectedContest.name}</span>
                         </p>
@@ -152,11 +154,17 @@ const ParticipatedContests = () => {
                         />
 
                         <div className="flex justify-end gap-3">
-                            <button onClick={() => setModalOpen(false)} className="px-4 py-2 rounded-full border hover:bg-gray-100 transition">
+                            <button
+                                onClick={() => setModalOpen(false)}
+                                className="px-4 py-2 rounded-full border hover:bg-gray-100 transition"
+                            >
                                 Cancel
                             </button>
 
-                            <button onClick={handleSubmitTask} className="px-5 py-2 rounded-full bg-fuchsia-600 text-white hover:bg-fuchsia-700 transition" >
+                            <button
+                                onClick={handleSubmitTask}
+                                className="px-5 py-2 rounded-full bg-fuchsia-600 text-white hover:bg-fuchsia-700 transition"
+                            >
                                 Submit
                             </button>
                         </div>

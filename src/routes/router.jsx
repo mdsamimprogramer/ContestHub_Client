@@ -48,10 +48,6 @@ export const router = createBrowserRouter([
                 Component: ExtraSection
             },
             {
-                path: '/support-settings',
-                Component: SupportSettings
-            },
-            {
                 path: "/contest/:id",
                 element: <PrivateRoute><ContestDetails /></PrivateRoute>
             },
@@ -137,7 +133,10 @@ export const router = createBrowserRouter([
                 path: "admin/payments",
                 element: <AdminRoute><ManagePayments /></AdminRoute>
             },
-
+            {
+                path: 'support-settings',
+                Component: SupportSettings
+            }
 
 
             // {

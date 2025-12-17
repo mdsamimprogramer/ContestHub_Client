@@ -2,7 +2,7 @@ import { FaEnvelope, FaQuestionCircle, FaCog } from "react-icons/fa";
 
 const SupportSettings = () => {
     return (
-        <div className="max-w-5xl mx-auto p-6">
+        <div className="max-w-5xl mx-auto p-5">
             <h2 className="text-2xl font-bold mb-6">Support & Settings</h2>
 
             {/* Support Section */}

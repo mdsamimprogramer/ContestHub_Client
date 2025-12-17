@@ -1,14 +1,15 @@
 import React from 'react';
 import { BsArrowLeftRight } from 'react-icons/bs';
-import { FaHeadset, FaMotorcycle } from 'react-icons/fa';
+import { FaHeadset, FaHome, FaMotorcycle } from 'react-icons/fa';
 import { CgProfile } from "react-icons/cg";
 import { GoProjectSymlink } from "react-icons/go";
-import { MdGroupAdd, MdOutlineAddTask } from "react-icons/md";
+import { MdGroupAdd, MdManageAccounts, MdOutlineAddTask } from "react-icons/md";
 import { GiPodiumWinner } from "react-icons/gi";
 import { TbHomeHand } from 'react-icons/tb';
 import { Link, NavLink, Outlet } from 'react-router';
 import { IoIosPersonAdd } from "react-icons/io";
 import useRole from '../hooks/useRole';
+import { GrUserManager } from "react-icons/gr";
 
 const DashboardLayout = () => {
     const { role } = useRole()
@@ -95,21 +96,21 @@ const DashboardLayout = () => {
                         {
                             role === 'admin' && <>
                                 <li>
-                                    <NavLink to='/dashboard/admin' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
-                                        <FaMotorcycle size={20} />
-                                        <span className="is-drawer-close:hidden">Approve-riders</span>
+                                    <NavLink to='/dashboard/admin' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Admin Home">
+                                        <FaHome size={20} />
+                                        <span className="is-drawer-close:hidden">Admin Home</span>
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/admin/contests' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
-                                        <FaMotorcycle size={20} />
-                                        <span className="is-drawer-close:hidden">Approve-riders</span>
+                                    <NavLink to='/dashboard/admin/users' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Manage Users">
+                                        <GrUserManager size={20} />
+                                        <span className="is-drawer-close:hidden">Manage Users</span>
                                     </NavLink>
                                 </li>
                                 <li>
-                                    <NavLink to='/dashboard/admin/users' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
-                                        <FaMotorcycle size={20} />
-                                        <span className="is-drawer-close:hidden">Approve-riders</span>
+                                    <NavLink to='/dashboard/admin/contests' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Manage Contests">
+                                        <MdManageAccounts size={20} />
+                                        <span className="is-drawer-close:hidden">Manage Contests</span>
                                     </NavLink>
                                 </li>
                             </>
@@ -140,7 +141,7 @@ const DashboardLayout = () => {
                         </li> */}
 
                         <li>
-                            <NavLink to='/support-settings' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Support & Settings">
+                            <NavLink to='/dashboard/support-settings' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Support & Settings">
                                 <FaHeadset size={20} />
                                 <span className="is-drawer-close:hidden">Support & Settings</span>
                             </NavLink>

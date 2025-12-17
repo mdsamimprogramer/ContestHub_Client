@@ -44,7 +44,7 @@ export default function ContestSubmissions() {
     if (loading) return <Loading></Loading>
 
     return (
-        <div className="p-4">
+        <div className="p-5">
             <h2 className="text-2xl font-bold mb-4">Submissions</h2>
             {subs.length === 0 ? (
                 <p>No submissions yet.</p>
