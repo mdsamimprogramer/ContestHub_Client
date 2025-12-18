@@ -5,7 +5,7 @@
 ---
 
 ## 🌐 Live Site
-[Visit ContestHub](https://your-live-site-link.com)
+[Visit ContestHub](https://contests-hub.netlify.app/)
 
 ---
 
@@ -13,9 +13,9 @@
 
 | Role      | Email                | Password      |
 |----------|--------------------|--------------|
-| Admin     | admin@example.com    | Admin@123    |
-| Creator   | creator@example.com  | Creator@123  |
-| User      | user@example.com     | User@123     |
+| Admin     | admin1@gmail.com.com    | Samim123    |
+| Creator   | creator@gmail.com.com  | Samim123  |
+| User      | user@example.com     | User.....  |
 
 ---
 
