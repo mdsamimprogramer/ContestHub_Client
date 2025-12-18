@@ -59,8 +59,8 @@ const Footer = () => {
             {/* Bottom Footer */}
             <div className="border-t border-gray-800 mt-2.5">
                 <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col items-center justify-center text-gray-500 text-sm text-center">
-                    <p>© 2025 ContestHub. All rights reserved.</p>
                     <p> Designed & Developed by <span className="text-fuchsia-500 font-semibold">Samim</span></p>
+                    <p>© 2025 ContestHub. All rights reserved.</p>
                 </div>
             </div>
         </footer>
