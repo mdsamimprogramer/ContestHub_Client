@@ -116,30 +116,6 @@ const DashboardLayout = () => {
                             </>
                         }
 
-
-                        {/* admin only links */}
-                        {/* {role === 'admin' && <>
-                            <li>
-                                <NavLink to='/dashboard/approve-riders' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Approve Riders">
-                                    <FaMotorcycle size={18} />
-                                    <span className="is-drawer-close:hidden">Approve-riders</span>
-                                </NavLink>
-                            </li>
-                        </>} */}
-
-                        {/* <li>
-                            <NavLink to='/dashboard/assign-riders' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Assign Riders">
-                                <RiEBikeFill size={18} />
-                                <span className="is-drawer-close:hidden">Assign-riders</span>
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink to='/dashboard/users-management' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Users Manegments">
-                                <FaUser size={18} />
-                                <span className="is-drawer-close:hidden">Approve-riders</span>
-                            </NavLink>
-                        </li> */}
-
                         <li>
                             <NavLink to='/dashboard/support-settings' className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Support & Settings">
                                 <FaHeadset size={20} />

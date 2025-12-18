@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink } from 'react-router';
 import useAuth from '../hooks/useAuth';
 import { FaTrophy, FaBars, FaTimes } from 'react-icons/fa';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
     const { user, logOut } = useAuth();
@@ -33,11 +34,12 @@ export default function Navbar() {
             <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => isActive ? activeClass : normalClass}>Home</NavLink>
             <NavLink to="/all-contests" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => isActive ? activeClass : normalClass}>All Contests</NavLink>
             <NavLink to="/extra-section" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => isActive ? activeClass : normalClass}>About Us</NavLink>
+            <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => isActive ? activeClass : normalClass}>Contact Us</NavLink>
         </>
     );
 
     return (
-        <nav className="bg-gray-50 shadow-lg sticky top-0 z-50">
+        <nav className="bg-gray-50 shadow-md sticky top-0 z-50">
             <div className="px-5 md:px-12 lg:px-20 xl:px-28">
                 <div className="flex items-center justify-between h-16">
 
@@ -83,6 +85,9 @@ export default function Navbar() {
                                         <button onClick={handleLogout} className="w-full text-left block px-4 py-2 text-sm text-red-500 hover:bg-red-50 rounded-lg transition mt-1">
                                             Logout
                                         </button>
+                                        <div className="ml-2.5">
+                                            <ThemeToggle />
+                                        </div>
                                     </div>
                                 )}
                             </div>

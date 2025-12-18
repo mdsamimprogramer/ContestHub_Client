@@ -38,12 +38,9 @@ export default function ContestDetails() {
     const isEnded = new Date(contest.deadline) < new Date();
 
     return (
-        <div className="max-w-6xl mx-auto p-6">
+        <div className="max-w-6xl mx-auto p-5 my-5 rounded-md bg-gray-50">
             {/* Banner */}
-            <img
-                src={contest.image}
-                className="w-full h-80 object-cover rounded-xl mb-6"
-            />
+            <img src={contest.image} className="w-full h-80 object-cover rounded-xl mb-6"/>
 
             {/* Info */}
             <h2 className="text-3xl font-bold mb-2">{contest.name}</h2>
@@ -75,13 +72,8 @@ export default function ContestDetails() {
                 <div className="bg-green-100 p-4 rounded mb-6">
                     <h3 className="font-bold text-lg">🏆 Winner</h3>
                     <div className="flex items-center gap-3 mt-2">
-                        <img
-                            src={contest.winner.photo}
-                            className="w-12 h-12 rounded-full"
-                        />
-                        <span className="font-semibold">
-                            {contest.winner.name}
-                        </span>
+                        <img src={contest.winner.photo} className="w-12 h-12 rounded-full"/>
+                        <span className="font-semibold"> {contest.winner.name} </span>
                     </div>
                 </div>
             )}
@@ -95,7 +87,7 @@ export default function ContestDetails() {
                         onClick={() => navigate(`/dashboard/payment/${contest._id}`)}
                         className="btn btn-primary"
                     >
-                        Register / Pay ৳{contest.price}
+                        Register / Pay ${contest.price}
                     </button>
                 )}
 

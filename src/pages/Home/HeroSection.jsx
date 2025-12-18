@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { MdSearch } from "react-icons/md"; // React Icon Library for Search Icon
+import { MdSearch } from "react-icons/md";
 
 const contestTypes = [
     { label: "Select Contest Type", value: "" },

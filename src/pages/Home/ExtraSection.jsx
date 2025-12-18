@@ -14,7 +14,6 @@ const ExtraSection = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white/80"></div>
 
             <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-                {/* Header Section */}
                 <div className="mb-14">
                     <h2 className="text-3xl md:text-4xl font-black text-slate-800 mb-4 tracking-tight">
                         Why Choose <span className="text-blue-600">ContestHub?</span>
@@ -29,7 +28,6 @@ const ExtraSection = () => {
                 {/* Cards Container */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
 
-                    {/* Card 1: Secure */}
                     <div className="bg-white/70 backdrop-blur-md p-10 rounded-3xl border border-white shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
                         <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors duration-300">
                             <ShieldCheckIcon className="w-10 h-10 text-blue-600 group-hover:text-white" />
@@ -41,7 +39,6 @@ const ExtraSection = () => {
                         </p>
                     </div>
 
-                    {/* Card 2: Innovation */}
                     <div className="bg-white/70 backdrop-blur-md p-10 rounded-3xl border border-white shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
                         <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors duration-300">
                             <LightBulbIcon className="w-10 h-10 text-blue-600 group-hover:text-white" />
@@ -53,7 +50,6 @@ const ExtraSection = () => {
                         </p>
                     </div>
 
-                    {/* Card 3: Rewards */}
                     <div className="bg-white/70 backdrop-blur-md p-10 rounded-3xl border border-white shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
                         <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 transition-colors duration-300">
                             <TrophyIcon className="w-10 h-10 text-blue-600 group-hover:text-white" />

@@ -3,6 +3,7 @@ import { Navigate, Outlet } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import useAuth from '../hooks/useAuth';
 import useAxiosSecure from '../hooks/useAxiosSecure';
+import Loading from '../components/Loading';
 
 const CreatorRoute = ({ children }) => {
     const { user, loading } = useAuth();
@@ -18,7 +19,7 @@ const CreatorRoute = ({ children }) => {
         enabled: !!user?.email,
     });
 
-    if (loading || isLoading) return <div>Loading...</div>;
+    if (loading || isLoading) return <Loading></Loading>;
 
     if (roleData?.role !== 'user') {
         return <Navigate to='/' />;

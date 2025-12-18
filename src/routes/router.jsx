@@ -28,6 +28,7 @@ import ManageUsers from "../pages/Dashboard/Admin/ManageUsers";
 import AdminRoute from "./AdminRoute";
 import CreatorRoute from "./CreatorRoute";
 import SupportSettings from "../components/SupportSettings";
+import Contact from "../pages/ExtraPages/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
             {
                 path: 'extra-section',
                 Component: ExtraSection
+            },
+            {
+                path: 'contact',
+                Component: Contact
             },
             {
                 path: "/contest/:id",
@@ -134,24 +139,6 @@ export const router = createBrowserRouter([
                 Component: SupportSettings
             }
 
-
-            // {
-            //     path: 'payment-history',
-            //     Component: PaymentHistory
-            // },
-            // {
-            //     path: 'payment-success',
-            //     Component: PaymentSuccess
-            // },
-            // {
-            //     path: 'payment-cancel',
-            //     Component: PaymentCancelled
-            // },
-
-            // {
-            //     path: "users-management",
-            //     element: <AdminRoute><UsersManagement></UsersManagement></AdminRoute>
-            // }
         ]
     },
 

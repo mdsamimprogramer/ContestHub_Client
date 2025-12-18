@@ -38,7 +38,7 @@ const WinnerAdvertisement = () => {
                         <div className="relative">
                             <img src={winner.image} alt={winner.contestName} className="h-48 w-full object-cover"/>
                             <div className="absolute top-4 left-4 bg-yellow-500 text-white font-semibold px-3 py-1 rounded-full shadow-md">
-                                🏆 Winner
+                             🏆 Winner
                             </div>
                         </div>
 

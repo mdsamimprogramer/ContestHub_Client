@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { useLocation, useNavigate } from 'react-router';
-
 import useAuth from '../../hooks/useAuth';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 
@@ -28,7 +26,6 @@ const SocialLogin = () => {
                         console.log('user data has been stored', res.data);
                         navigate(location?.state || '/')
                     })
-
             })
             .catch(err => {
                 console.log(err);

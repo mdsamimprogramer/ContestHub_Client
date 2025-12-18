@@ -37,7 +37,7 @@ const Login = () => {
                     <label className="label">Password</label>
                     <input type="password" {...register('password', { required: true, minLength: 6 })} className="input" placeholder="Password" />
                     <div><a className="link link-hover">Forgot password?</a></div>
-                    {errors.password?.type === 'required' && <p className='text-red-400'>Password must be 6 carecters</p>}
+                    {errors.password?.type === 'required' && <p className='text-red-400'>Password must be 6 characters</p>}
                     {errors.password?.type === 'minLength' && <p className='text-red-400'>MinLength 6 word adds</p>}
                     <button className="btn btn-neutral mt-4">Login</button>
                 </fieldset>

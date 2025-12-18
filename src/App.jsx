@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <h2>samim</h2>
+      <h2>Contest-Hub</h2>
     </>
   )
 }
