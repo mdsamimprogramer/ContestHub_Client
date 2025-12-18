@@ -29,6 +29,7 @@ import AdminRoute from "./AdminRoute";
 import CreatorRoute from "./CreatorRoute";
 import SupportSettings from "../components/SupportSettings";
 import Contact from "../pages/ExtraPages/Contact";
+import Leaderboard from "../pages/Leaderboard/Leaderboard";
 
 export const router = createBrowserRouter([
     {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
             {
                 path: 'contact',
                 Component: Contact
+            },
+            {
+                path: 'top-win',
+                Component: Leaderboard
             },
             {
                 path: "/contest/:id",

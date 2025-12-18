@@ -33,6 +33,7 @@ export default function Navbar() {
         <>
             <NavLink to="/" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => isActive ? activeClass : normalClass}>Home</NavLink>
             <NavLink to="/all-contests" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => isActive ? activeClass : normalClass}>All Contests</NavLink>
+            <NavLink to="/top-win" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => isActive ? activeClass : normalClass}>Top Winners</NavLink>
             <NavLink to="/extra-section" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => isActive ? activeClass : normalClass}>About Us</NavLink>
             <NavLink to="/contact" onClick={() => setIsMobileMenuOpen(false)} className={({ isActive }) => isActive ? activeClass : normalClass}>Contact Us</NavLink>
         </>

@@ -1,10 +1,13 @@
 import { useParams } from "react-router";
 import { useQuery } from "@tanstack/react-query";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
+import Loading from "../../components/Loading";
+import useAuth from "../../hooks/useAuth";
 
 const Payment = () => {
     const { contestId } = useParams();
     const axiosSecure = useAxiosSecure();
+    const { user } = useAuth();
 
     const { data: contest = {}, isLoading } = useQuery({
         queryKey: ["contest", contestId],
@@ -19,13 +22,13 @@ const Payment = () => {
             contestName: contest.name,
             price: contest.price,
             contestId: contest._id,
-            userEmail: contest.creatorEmail,
+            userEmail: user?.email,
         });
 
         window.location.href = res.data.url;
     };
 
-    if (isLoading) return <p>Loading...</p>;
+    if (isLoading) return <Loading></Loading>;
 
     return (
         <div className="p-6">

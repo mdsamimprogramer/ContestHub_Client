@@ -1,16 +1,77 @@
-# React + Vite
+# 🏆 ContestHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ContestHub** is a modern, fully responsive web application for managing creative contests. Users can create, discover, participate in, and manage contests in various categories like design, writing, gaming reviews, and more. The platform supports three user roles (Admin, Contest Creator, Normal User), secure authentication, payment integration, and dynamic dashboards.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Site
+[Visit ContestHub](https://your-live-site-link.com)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 👤 Demo Accounts
 
-## Expanding the ESLint configuration
+| Role      | Email                | Password      |
+|----------|--------------------|--------------|
+| Admin     | admin@example.com    | Admin@123    |
+| Creator   | creator@example.com  | Creator@123  |
+| User      | user@example.com     | User@123     |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📌 Features
+
+### General Features
+- Fully responsive design (mobile, tablet, desktop)  
+- Secure authentication using Firebase  
+- Role-based dashboards: Admin, Creator, and User  
+- Payment integration with Stripe  
+- Smooth UI with Tailwind CSS  
+- Sweet Alert notifications for all CRUD actions  
+- Dynamic search and filtering by contest types  
+- Winner announcement and recent winners section  
+- Submit tasks after contest registration  
+- Dark/Light mode toggle saved in localStorage  
+
+### Admin Dashboard
+- Approve, reject, and delete contests  
+- Manage users and change roles (User ↔ Creator ↔ Admin)  
+- View platform statistics: total users, creators, contests, earnings  
+
+### Creator Dashboard
+- Add new contests with detailed forms  
+- Edit or delete pending contests  
+- View submissions and declare winners  
+- Track created contests and status  
+
+### User Dashboard
+- View participated contests and payment status  
+- View won contests and prizes  
+- Update profile information (name, photo, bio)  
+- Track win percentage with charts  
+
+### Extra Features
+- Leaderboard showing top users by contest wins  
+- Pagination (10 items per page) on tables  
+- Two extra meaningful pages (configurable)  
+- Nice animations and interactive UI  
+
+---
+
+## 🛠 Tech Stack
+
+**Frontend:** React.js, React Router, Tailwind CSS, React Query, React Hook Form  
+**Backend:** Node.js, Express.js, MongoDB, Firebase Auth  
+**Payment:** Stripe API  
+**Deployment:** Vercel / Netlify (Frontend), Vercel (Backend)  
+
+---
+
+## 🚀 Installation
+
+### Backend
+```bash
+cd server
+npm install
+cp .env.example .env  # Add your environment variables
+npm run dev
