@@ -59,42 +59,44 @@ const Register = () => {
             })
     }
     return (
-        <div className="card bg-base-100 mx-auto mt-10 w-full max-w-sm shrink-0 shadow-2xl">
-            <h3 className='text-3xl text-center'>Welcome ContestHub</h3>
-            <p className='text-center'>Please Register</p>
-            <form className='card-body' onSubmit={handleSubmit(handleRegistration)}>
-                <fieldset className="fieldset">
-                    {/* name */}
-                    <label className="label">Name</label>
-                    <input type="text" {...register('name', { required: true })} className="input" placeholder="name.." />
-                    {errors.name?.type === 'required' && <p className='text-red-500'>Name is required</p>}
+        <div className='px-4 min-h-screen flex items-center justify-center'>
+            <div className="card bg-base-100 mx-auto w-full p-4 max-w-lg shrink-0 shadow-2xl">
+                <h3 className='text-3xl font-bold text-center text-gray-800'>Welcome ContestHub</h3>
+                <p className='text-gray-500 text-center mt-1'>Please Register</p>
+                <form className='card-body' onSubmit={handleSubmit(handleRegistration)}>
+                    <fieldset className="fieldset">
+                        {/* name */}
+                        <label className="label block text-gray-700 font-medium">Name</label>
+                        <input type="text" {...register('name', { required: true })} className="input w-full" placeholder="name.." />
+                        {errors.name?.type === 'required' && <p className='text-red-500'>Name is required</p>}
 
-                    {/* name */}
-                    <label className="label">Photo</label>
-                    <input type="file" {...register('photo', { required: true })} className="file-input" placeholder="photo" />
-                    {errors.photo?.type === 'required' && <p className='text-red-500'>Photo is required</p>}
+                        {/* name */}
+                        <label className="label block text-gray-700 font-medium">Photo</label>
+                        <input type="file" {...register('photo', { required: true })} className="file-input w-full" placeholder="photo" />
+                        {errors.photo?.type === 'required' && <p className='text-red-500'>Photo is required</p>}
 
-                    {/* email */}
-                    <label className="label">Email</label>
-                    <input type="email" {...register('email', { required: true })} className="input" placeholder="Email" />
-                    {errors.email?.type === 'required' && <p className='text-red-500'>Email is required</p>}
+                        {/* email */}
+                        <label className="label block text-gray-700 font-medium">Email</label>
+                        <input type="email" {...register('email', { required: true })} className="input w-full" placeholder="Email" />
+                        {errors.email?.type === 'required' && <p className='text-red-500'>Email is required</p>}
 
-                    {/* password */}
-                    <label className="label">Password</label>
-                    <input type="password" {...register('password', {
-                        required: true,
-                        minLength: 6,
-                        pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{6,}$/
-                    })} className="input" placeholder="Password" />
-                    {errors.password?.type === 'required' && <p className='text-red-500'>Password is required</p>}
-                    {errors.password?.type === 'minLength' && <p className='text-red-400'>Password must have 6 carecter</p>}
-                    {errors.password?.type === 'pattern' && <p className='text-red-400'>Password must have uppercase and lowercase or number.</p>}
-                    <div><a className="link link-hover">Forgot password ?</a></div>
-                    <button className="btn btn-neutral mt-4">Register</button>
-                    <SocialLogin></SocialLogin>
-                </fieldset>
-                <p> Already have an account <Link state={location.state} to='/login' className='text-blue-300 font-bold'>Login</Link></p>
-            </form>
+                        {/* password */}
+                        <label className="label block text-gray-700 font-medium">Password</label>
+                        <input type="password" {...register('password', {
+                            required: true,
+                            minLength: 6,
+                            pattern: /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{6,}$/
+                        })} className="input w-full" placeholder="Password" />
+                        {errors.password?.type === 'required' && <p className='text-red-500'>Password is required</p>}
+                        {errors.password?.type === 'minLength' && <p className='text-red-400'>Password must have 6 carecter</p>}
+                        {errors.password?.type === 'pattern' && <p className='text-red-400'>Password must have uppercase and lowercase or number.</p>}
+                        <div><a className="link link-hover">Forgot password ?</a></div>
+                        <button className="btn btn-neutral mt-4">Register</button>
+                        <SocialLogin></SocialLogin>
+                    </fieldset>
+                    <p className='text-center'> Already have an account <Link state={location.state} to='/login' className='text-blue-300 font-bold'>Login</Link></p>
+                </form>
+            </div>
         </div>
     );
 };

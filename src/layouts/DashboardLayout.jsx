@@ -31,10 +31,9 @@ const DashboardLayout = () => {
 
             <div className="drawer-side shadow-md is-drawer-close:overflow-visible">
                 <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-                <div className="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-14 is-drawer-open:w-64">
+                <div className="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-16 is-drawer-open:w-58">
                     {/* Sidebar content here */}
-                    <ul className="menu w-full space-y-4 grow">
-                        {/* List item */}
+                    <ul className="menu w-full mt-2.5 space-y-5 grow">
                         <li>
                             <Link to={'/'} className="is-drawer-close:tooltip is-drawer-close:tooltip-right" data-tip="Homepage">
                                 <TbHomeHand size={20} color='red' />

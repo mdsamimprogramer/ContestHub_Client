@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import SubmitTaskModal from "./SubmitTaskModal";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAuth from "../../hooks/useAuth";
+import Loading from "../../components/Loading";
 
 export default function ContestDetails() {
     const { id } = useParams();
@@ -33,12 +34,12 @@ export default function ContestDetails() {
         }
     });
 
-    if (isLoading) return <p className="text-center">Loading...</p>;
+    if (isLoading) return <Loading></Loading>;
 
     const isEnded = new Date(contest.deadline) < new Date();
 
     return (
-        <div className="max-w-6xl mx-auto p-5 my-5 rounded-md bg-gray-50">
+        <div className="max-w-6xl mx-auto p-4 my-5 rounded-md bg-gray-50">
             {/* Banner */}
             <img src={contest.image} className="w-full h-80 object-cover rounded-xl mb-6"/>
 
@@ -46,9 +47,9 @@ export default function ContestDetails() {
             <h2 className="text-3xl font-bold mb-2">{contest.name}</h2>
             <p className="text-gray-600 mb-6">{contest.description}</p>
 
-            <div className="grid md:grid-cols-3 gap-4 mb-6">
+            <div className="grid md:grid-cols-3 font-semibold gap-4 mb-6">
                 <div>👥 Participants: {contest.participants}</div>
-                <div>💰 Prize Money: ৳{contest.prizeMoney}</div>
+                <div>💰 Prize Money: ${contest.prizeMoney}</div>
                 <div>
                     ⏰ Deadline:{" "}
                     {isEnded ? (

@@ -26,7 +26,7 @@ const WinnerAdvertisement = () => {
     }
 
     return (
-        <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-14 px-5 md:px-8 rounded-3xl my-12 shadow-lg">
+        <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-14 px-4 md:px-8 rounded-3xl my-12 shadow-lg">
             <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
                 🎉 Meet Our Recent Winners!
             </h2>

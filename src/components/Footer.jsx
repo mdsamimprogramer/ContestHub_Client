@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -40,16 +40,16 @@ const Footer = () => {
                 <div className="space-y-2">
                     <h3 className="text-white font-semibold">Follow Us</h3>
                     <div className="flex gap-4 mt-2 md:mt-4">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition hover:rotate-360 duration-500 hover:scale-125">
                             <FaFacebook size={28} />
                         </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition hover:rotate-360 duration-500 hover:scale-125">
                             <FaLinkedin size={28} />
                         </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition">
-                            <FaTwitter size={28} />
+                        <a href="https://github.com/mdsamimprogramer" target="_blank" rel="noopener noreferrer" className="hover:text-sky-400 transition hover:rotate-360 duration-500 hover:scale-125">
+                            <FaGithub size={28} />
                         </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition hover:rotate-360 duration-500 hover:scale-125">
                             <FaInstagram size={28} />
                         </a>
                     </div>

@@ -22,7 +22,7 @@ const HomeBanner = () => {
     };
 
     return (
-        <div className="relative w-full min-h-[70vh] bg-gray-800 flex items-center overflow-hidden rounded-xl justify-center">
+        <div className="relative w-full min-h-[68vh] bg-gray-800 flex items-center overflow-hidden rounded-md justify-center">
             <video className="absolute top-0 left-0 w-full h-full object-cover"
                 src="/video.mp4"
                 type="video/mp4"
@@ -44,7 +44,7 @@ const HomeBanner = () => {
                 </p>
 
                 {/* Search Form */}
-                <form onSubmit={handleSearch} className="flex flex-col md:flex-row gap-4 justify-center pt-6 items-center">
+                <form onSubmit={handleSearch} className="flex mx-5 flex-col md:flex-row gap-4 justify-center pt-6 items-center">
                     <div className="relative w-full md:w-80">
                         <MdSearch className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 text-xl" />
 

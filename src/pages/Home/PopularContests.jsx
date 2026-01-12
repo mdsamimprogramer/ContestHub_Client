@@ -18,7 +18,7 @@ const PopularContests = () => {
     if (isLoading) return <Loading></Loading>
 
     return (
-        <section className="my-10 md:my-16">
+        <section className="my-10 md:my-14">
             <h2 className="text-3xl font-bold text-center mb-8">
                 🔥 Popular Contests
             </h2>
@@ -32,7 +32,7 @@ const PopularContests = () => {
             {/* Show All Button */}
             <div className="text-center mt-5 md:mt-8">
                 <Link to="/all-contests"
-                    className="inline-block px-6 py-2 bg-purple-600 text-white text-lg font-semibold rounded-full hover:bg-purple-700 transition-shadow shadow-md">
+                    className="inline-block px-6 py-2 bg-purple-600 text-white text-lg font-semibold rounded-full hover:bg-purple-700 transition shadow-md">
                     Show All Contests_
                 </Link>
             </div>

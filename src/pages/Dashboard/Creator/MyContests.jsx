@@ -75,10 +75,7 @@ export default function MyContests() {
                                     </Link>
 
                                     {c.status === "pending" && (
-                                        <button
-                                            onClick={() => handleDelete(c._id)}
-                                            className="btn btn-sm btn-error"
-                                        >
+                                        <button  onClick={() => handleDelete(c._id)} className="btn btn-sm btn-error">
                                             Delete
                                         </button>
                                     )}

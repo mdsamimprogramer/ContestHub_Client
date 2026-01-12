@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const ExtraSection = () => {
     return (
-        <section className="relative py-24 overflow-hidden bg-gray-200"
+        <section className="relative mt-4 rounded-md py-16 overflow-hidden bg-gray-200"
             style={{
                 backgroundImage: `radial-gradient(#3b82f6 0.5px, transparent 0.5px)`,
                 backgroundSize: '30px 30px',
@@ -13,7 +13,7 @@ const ExtraSection = () => {
         >
             <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white/80"></div>
 
-            <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+            <div className="max-w-7xl mx-auto px-4 md:px-8 text-center relative z-10">
                 <div className="mb-14">
                     <h2 className="text-3xl md:text-4xl font-black text-slate-800 mb-4 tracking-tight">
                         Why Choose <span className="text-blue-600">ContestHub?</span>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaFacebook, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 const Contact = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -76,6 +76,7 @@ const Contact = () => {
                                 <div className="flex gap-4">
                                     <a href="https://www.facebook.com/md.samim.khan.22906" className="p-3 bg-gray-100 dark:bg-slate-700 rounded-full hover:text-blue-600 transition-all"><FaFacebook size={20} /></a>
                                     <a href="https://www.linkedin.com/in/samim01/" className="p-3 bg-gray-100 dark:bg-slate-700 rounded-full hover:text-blue-700 transition-all"><FaLinkedin size={20} /></a>
+                                    <a href="https://www.github.com/mdsamimprogramer" className="p-3 bg-gray-100 dark:bg-slate-700 rounded-full hover:text-blue-700 transition-all"><FaGithub size={20} /></a>
                                 </div>
                             </div>
                         </div>

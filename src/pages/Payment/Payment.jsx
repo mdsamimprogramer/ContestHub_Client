@@ -31,14 +31,26 @@ const Payment = () => {
     if (isLoading) return <Loading></Loading>;
 
     return (
-        <div className="p-6">
-            <h2 className="text-xl font-bold">
-                Pay ${contest.price} for {contest.name}
-            </h2>
-            <button onClick={handlePayment} className="btn btn-primary mt-4">
-                Pay Now
-            </button>
+        <div className="min-h-[80vh] flex items-center justify-center px-4 sm:px-6">
+            <div className="w-full max-w-md p-5 sm:p-6 rounded-2xl border border-base-300 bg-base-100 shadow-md">
+                <h2 className="text-xl sm:text-2xl font-bold text-base-content text-center">
+                    Complete Your Payment
+                </h2>
+                <p className="mt-2 text-xs sm:text-sm text-base-content/70 text-center">
+                    You are about to pay for the contest below
+                </p>
+                <div className="mt-5 rounded-xl bg-base-200 p-4 flex flex-col items-center gap-2">
+                    <span className="text-sm sm:text-base font-medium text-center truncate max-w-full">{contest.name}</span>
+                    <span className="text-2xl sm:text-3xl font-extrabold text-primary"> ${contest.price}</span>
+                </div>
+
+                <button onClick={handlePayment} className="btn btn-primary w-full mt-6 text-base sm:text-lg font-semibold tracking-wide">
+                    Pay Now
+                </button>
+
+            </div>
         </div>
+
     );
 };
 

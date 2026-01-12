@@ -30,10 +30,12 @@ import CreatorRoute from "./CreatorRoute";
 import SupportSettings from "../components/SupportSettings";
 import Contact from "../pages/ExtraPages/Contact";
 import Leaderboard from "../pages/Leaderboard/Leaderboard";
+import ErrorPage from "../components/ErrorPage";
 
 export const router = createBrowserRouter([
     {
         path: "/",
+        errorElement: <ErrorPage />,
         Component: MainLayout,
         children: [
             {

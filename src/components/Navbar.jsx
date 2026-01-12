@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router';
 import useAuth from '../hooks/useAuth';
 import { FaTrophy, FaBars, FaTimes } from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
+// import logo from "../assets/win.png";
 
 export default function Navbar() {
     const { user, logOut } = useAuth();
@@ -40,9 +41,9 @@ export default function Navbar() {
     );
 
     return (
-        <nav className="bg-gray-50 shadow-md sticky top-0 z-50">
-            <div className="px-5 md:px-12 lg:px-20 xl:px-28">
-                <div className="flex items-center justify-between h-16">
+        <nav className="bg-gray-50 opacity-90 shadow-md sticky top-0 z-50">
+            <div className="px-4 md:px-12 lg:px-20 xl:px-28">
+                <div className="flex items-center justify-between h-15">
 
                     {/* 1. Left: Logo Section */}
                     <div className="flex-shrink-0 flex items-center w-1/4">

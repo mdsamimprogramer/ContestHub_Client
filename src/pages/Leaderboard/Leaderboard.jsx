@@ -6,7 +6,7 @@ const Leaderboard = () => {
     const { data: users = [], isLoading } = useQuery({
         queryKey: ["leaderboard"],
         queryFn: async () => {
-            const res = await axios.get("http://localhost:3000/leaderboard");
+            const res = await axios.get("https://contests-hub.vercel.app/leaderboard");
             return res.data;
         },
     });
