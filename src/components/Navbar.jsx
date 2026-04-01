@@ -48,7 +48,8 @@ export default function Navbar() {
                     {/* 1. Left: Logo Section */}
                     <div className="flex-shrink-0 flex items-center w-1/4">
                         <Link to="/" className="flex items-center gap-2 group">
-                            <div className="bg-orange-100 p-2 rounded-lg group-hover:bg-orange-200 transition-colors">
+                            <div className="p-2 rounded-xl bg-gradient-to-br from-orange-100 to-orange-200 shadow-sm 
+group-hover:shadow-md group-hover:scale-105 transition-all duration-300">
                                 <FaTrophy className="text-orange-500 text-xl md:text-2xl" />
                             </div>
                             <span className="hidden sm:block text-2xl font-black text-gray-800 tracking-tight">
