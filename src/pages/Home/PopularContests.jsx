@@ -34,12 +34,14 @@ const PopularContests = () => {
             <div className="text-center mt-5 md:mt-8">
                 <Link
                     to="/all-contests"
-                    className="group inline-flex items-center gap-3 px-8 py-3 bg-purple-600 text-white text-lg font-bold rounded-full hover:bg-purple-700 hover:shadow-xl hover:shadow-purple-200 transition-all duration-300 transform active:scale-95"
+                    className="group inline-flex items-center gap-2 px-7 py-3 bg-purple-600 text-white text-base font-semibold rounded-full 
+             shadow-md hover:bg-purple-700 hover:shadow-lg transition-all duration-300 active:scale-95"
                 >
                     <span>Show All Contests</span>
 
-                    {/* React Icon with Animation */}
-                    <HiOutlineArrowNarrowRight className="text-2xl group-hover:translate-x-2 transition-transform duration-300" />
+                    <HiOutlineArrowNarrowRight
+                        className="text-xl transition-transform duration-300 group-hover:translate-x-1"
+                    />
                 </Link>
             </div>
         </section>

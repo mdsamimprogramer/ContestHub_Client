@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheckIcon, LightBulbIcon, TrophyIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router';
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 
 const ExtraSection = () => {
     return (
@@ -64,8 +65,12 @@ const ExtraSection = () => {
 
                 {/* Call to Action */}
                 <div className="mt-20">
-                    <Link to="/all-contests" className="bg-slate-900 text-white px-10 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-blue-600 transition-all duration-300 transform hover:scale-105">
-                        Explore All Contests
+                    <Link to="/all-contests"
+                        className="group inline-flex items-center gap-2 px-7 py-3 bg-slate-900 text-white text-base font-semibold rounded-full 
+             shadow-md hover:bg-blue-600 hover:shadow-lg transition-all duration-300 active:scale-95"
+                    >
+                        <span>Explore All Contests</span>
+                        <HiOutlineArrowNarrowRight className="text-xl transition-transform duration-300 group-hover:translate-x-1" />
                     </Link>
                 </div>
 
